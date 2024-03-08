@@ -1,0 +1,74 @@
+.heading {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: large;
+  padding-bottom: 35px;
+  color: #00a19f;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.loginBox {
+  background-color: rgb(250, 254, 255);
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 90%;
+  max-width: 400px;
+  border: 0.5px solid #00a19e3b;
+}
+
+.inputField {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  width: 150px;
+  cursor: pointer;
+
+}
+
+.entrar {
+  background-color: #00a19f;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all ease .2s;
+}
+
+.entrar:hover {
+  background-color: #3ed8c3;
+  color: white;
+}
+
+.cadastrar {
+  background-color: rgb(250, 254, 255);
+  border: 2px solid #00a19f;
+  color: #00a19f;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all ease .2s;
+}
+
+.cadastrar:hover {
+  background-color: #00a19f;
+  color: white;
+}

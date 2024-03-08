@@ -1,0 +1,222 @@
+@keyframes spin {
+    to { transform: rotate(360deg); }
+  }
+  
+  .spinner {
+    border: 5px solid rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    border-top-color: #00a19f;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s ease-in-out infinite;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -25px; /* Metade da altura */
+    margin-left: -25px; /* Metade da largura */
+  }
+
+
+.profileBox {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 20px;
+    padding-bottom: 40px;
+    border-radius: 8px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.profileHeading {
+    color: #00a19f;
+    margin-bottom: 40px;
+}
+
+.profileContent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.profilePic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    margin-right: 20px;
+    align-self: start;
+    border: 5px outset #00a19f;
+}
+
+.profileDetails {
+    text-align: left;
+    align-self: start;
+    width: 100%;
+    max-width: calc(100% - 250px - 20px);
+    /* Isso restringe a largura dos detalhes para evitar que saiam do profileBox */
+}
+
+.profileName,
+.profileEmail,
+.profileAbout {
+    margin-bottom: 5px;
+    font-weight: 600;
+    background-color: #f8f8f8;
+    padding: 7px;
+    padding-left: 12px;
+    width: 100%;
+    max-width: 100%;
+    border-radius: 4px;
+    outline: none;
+}
+
+.profileAbout {
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+
+.socialLinksList {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    list-style: none;
+}
+
+.socialLinksList li {
+    display: inline-block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.socialLinksList li a {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.socialLinkItem {
+    flex-grow: 1;
+    text-align: center;
+    margin: 0 5px;
+}
+
+.socialLinkButton {
+    display: block;
+    background-color: #00a19f;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 4px;
+    transition: background-color .2s;
+    margin: 5px 0;
+}
+
+.socialLinkButton:hover {
+    background-color: #3ed8c3;
+}
+
+.editButton {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    border-radius: 4px;
+    width: 70px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1.5px solid #00a19f;
+    color: #00a19f;
+    font-size: 15px;
+    transition: all ease .2s;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.editButton:hover {
+    background-color: #00a19f;
+    color: white;
+}
+
+.exitButton {
+    position: absolute;
+    top: 25px;
+    left: 20px;
+    border-radius: 4px;
+    width: 70px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1.5px solid #fe6464;
+    color: #fe6464;
+    font-size: 15px;
+    transition: all ease .2s;
+    margin-bottom: 20px;
+    padding: 5px;
+}
+
+.exitButton:hover {
+    background-color: #fe6464;
+    color: white;
+}
+
+/* CSS existente acima */
+
+@media (max-width: 768px) {
+    .profileContent {
+        flex-direction: column;
+        align-items: center;
+        /* Isso garante que os itens fiquem centralizados */
+    }
+
+    .profilePic, .profileDetails {
+        max-width: none;
+        margin-right: 0;
+    }
+
+    .profilePic {
+        align-self: center;
+    }
+
+    .profileDetails {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 435px) {
+    .profileBox {
+        max-width: 100%;
+        padding: 5px;
+        margin: 0;
+    }
+
+    .socialLinksList {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .socialLinkItem {
+        width: 100%;
+        margin: 2.5px 0;
+    }
+
+    .editButton, .exitButton {
+        position: static;
+        margin: 5px auto;
+        display: block;
+        width: 100%;
+        padding: 10px;
+    }
+
+    .editButton {
+        margin-top: 15px;
+    }
+}
