@@ -22,7 +22,7 @@ DB_HOST=localhost
 DB_USER=seu_usuario
 DB_PASS=sua_senha
 DB_NAME=seu_banco_de_dados
-DB_PORT=543
+DB_PORT=5432
 ```
 
 ## Backend
@@ -51,8 +51,12 @@ Acesse a pasta "frontend" e instale as dependências
 ```bash
 npm install
 ```
-Após isso inicie o server
+Após isso inicie o processo
 ```bash
-start npm server
+npm run dev
 ```
 Tudo dando certo o projeto deve abrir na porta 3000
+
+### Video do sistema funcionando
+
+https://youtu.be/8jjKFcGhkOM
